@@ -20,3 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/gatu',[ Gato::class,'index']);
+Route::get('/gatu/{id}',[Gato::class,'show']);
+Route::post('/gatu', [Gato::class,'store']);
+
